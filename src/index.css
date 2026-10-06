@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+@theme {
+  /* Chapter palette — "The Reading Badge" */
+  --color-chapter-crimson: #8b0000;
+  --color-shelving-cream: #f3e6d0;
+  --color-readers-ink: #1c1410;
+  --color-margin-white: #fffef8;
+  --color-bookmark-gold: #b8860b;
+  --color-due-date-green: #2f6b4f;
+
+  /* Crimson scale (chapter-crimson base at 600) */
+  --color-crimson-300: #d46666;
+  --color-crimson-500: #a50000;
+  --color-crimson-600: #8b0000;
+  --color-crimson-700: #6e0000;
+  --color-crimson-800: #520000;
+  --color-crimson-950: #2d0000;
+
+  /* Cream scale (shelving-cream base at 50) */
+  --color-cream-50: #f3e6d0;
+  --color-cream-100: #faf4e8;
+  --color-cream-200: #e5d4bc;
+  --color-cream-300: #d4c4a8;
+
+  /* Reader's Ink neutral scale */
+  --color-ink-900: #1c1410;
+  --color-ink-700: #3d342f;
+  --color-ink-500: #6b5e55;
+  --color-ink-400: #8a7b70;
+
+  --font-kiosk: "Lexend", system-ui, sans-serif;
+  --font-staff: "Inter", system-ui, sans-serif;
+  --font-wordmark: "Libre Baskerville", Georgia, "Times New Roman", serif;
+  --font-stamp: "IBM Plex Mono", ui-monospace, monospace;
+
+  --shadow-card: 0 4px 24px rgba(45, 0, 0, 0.06);
+  --shadow-nav: 0 8px 32px rgba(45, 0, 0, 0.12);
+  --radius-card: 20px;
+  --radius-btn: 14px;
+  --radius-input: 12px;
+}
+
+body {
+  font-family: var(--font-staff);
+  color: var(--color-readers-ink);
+}
+
+.shell-main {
+  padding-bottom: calc(7rem + env(safe-area-inset-bottom, 0px));
+}
+
+@media (min-width: 1024px) {
+  .shell-main {
+    padding-bottom: 1.5rem;
+  }
+
+  .desktop-side-nav {
+    padding-top: calc(1.25rem + env(safe-area-inset-top, 0px));
+  }
+}
+
+.app-shell-header {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+/* Door signing is a focused task: hide the floating nav so it cannot cover the
+   sticky confirm bar, and drop the padding that reserved room for it. */
+body[data-door-focus='true'] .event-nav {
+  display: none;
+}
+
+body[data-door-focus='true'] .shell-main {
+  padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
+}
+
+.font-kiosk {
+  font-family: var(--font-kiosk);
+}
+
+.font-staff {
+  font-family: var(--font-staff);
+}
+
+.font-wordmark {
+  font-family: var(--font-wordmark);
+}
+
+.font-stamp {
+  font-family: var(--font-stamp);
+}
+
+.shadow-card {
+  box-shadow: var(--shadow-card);
+}
+
+.shadow-nav {
+  box-shadow: var(--shadow-nav);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+@media print {
+  @page {
+    size: letter portrait;
+    margin: 0.5in;
+  }
+
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+  }
+
+  .no-print,
+  .app-shell-header,
+  .event-nav,
+  .desktop-side-nav {
+    display: none !important;
+  }
+
+  main {
+    max-width: none !important;
+    padding: 0 !important;
+  }
+
+  .lanyard-print-grid {
+    display: grid !important;
+    grid-template-columns: repeat(2, 3in);
+    justify-content: space-between;
+    align-content: start;
+    gap: 0.35in 0.4in;
+  }
+
+  .lanyard-print-single {
+    display: flex !important;
+    justify-content: center !important;
+  }
+
+  .lanyard-card {
+    width: 3in !important;
+    height: 4in !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    break-inside: avoid !important;
+    page-break-inside: avoid !important;
+    page-break-after: auto !important;
+    break-after: auto !important;
+    border: 1px solid #cccccc !important;
+    border-radius: 0 !important;
+  }
+
+  .lanyard-print-single .lanyard-card {
+    margin: 0 auto !important;
+  }
+
+  .lanyard-card-header {
+    padding-top: 0.2in !important;
+    padding-bottom: 0.15in !important;
+  }
+
+  .lanyard-card-qr {
+    width: 1in !important;
+    height: 1in !important;
+  }
+}

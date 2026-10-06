@@ -1,0 +1,38 @@
+@keyframes badge-pulse {
+  0%,
+  100% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+
+  50% {
+    transform: translateY(-2px) scale(1.03);
+    opacity: 0.92;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .branded-loading__badge {
+    animation: none !important;
+  }
+}
+
+.branded-loading__badge {
+  filter: drop-shadow(0 4px 12px rgba(45, 0, 0, 0.08));
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .branded-loading__badge {
+    animation: badge-pulse 1.6s ease-in-out infinite;
+  }
+}
+
+.branded-empty {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 1.4375rem,
+    rgba(28, 20, 16, 0.03) 1.4375rem,
+    rgba(28, 20, 16, 0.03) 1.5rem
+  );
+}

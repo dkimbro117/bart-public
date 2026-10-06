@@ -1,0 +1,43 @@
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+node_modules
+dist
+dist-ssr
+*.local
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# Ops scripts, staff/parent emails, internal audits — kept on disk, never committed
+private/
+
+# Local tooling (not app source)
+.cursor/
+terminals/
+canvases/
+supabase/.temp/
+
+# Editor directories and files
+.vscode/*
+!.vscode/extensions.json
+.idea
+.DS_Store
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# Generated roster load (may contain real PII)
+supabase/roster-import.sql
+supabase/ops/*_sync_guardian_emails_from_master.sql
+supabase/ops/*_from_master.sql

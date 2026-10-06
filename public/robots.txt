@@ -1,0 +1,10 @@
+User-agent: *
+Disallow: /go
+Disallow: /go/
+Disallow: /family
+Disallow: /door
+Disallow: /check-in
+Disallow: /check-out
+Disallow: /roster-live
+Disallow: /login
+Allow: /

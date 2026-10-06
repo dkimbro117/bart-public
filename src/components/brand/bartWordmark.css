@@ -1,0 +1,70 @@
+.bart-wordmark {
+  display: inline-block;
+  transform: rotate(-1.5deg);
+}
+
+.bart-wordmark__plate {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem 0.625rem;
+  border: 2px solid var(--color-crimson-600);
+  outline: 1px solid rgba(139, 0, 0, 0.28);
+  outline-offset: 3px;
+  background-color: rgba(255, 254, 248, 0.65);
+  box-shadow:
+    1px 2px 0 rgba(110, 0, 0, 0.12),
+    inset 0 0 0 1px rgba(255, 254, 248, 0.8);
+}
+
+.bart-wordmark__plate--on-dark {
+  border-color: rgba(255, 254, 248, 0.85);
+  outline-color: rgba(255, 254, 248, 0.25);
+  background-color: rgba(45, 0, 0, 0.35);
+  box-shadow:
+    1px 2px 0 rgba(0, 0, 0, 0.2),
+    inset 0 0 0 1px rgba(255, 254, 248, 0.08);
+}
+
+.bart-wordmark__text {
+  position: relative;
+  font-family: var(--font-wordmark);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  line-height: 1;
+  color: var(--color-crimson-600);
+  text-shadow:
+    0.5px 0.5px 0 rgba(110, 0, 0, 0.2),
+    -0.5px 0 rgba(139, 0, 0, 0.1);
+}
+
+.bart-wordmark__text--on-dark {
+  color: var(--color-margin-white);
+  text-shadow:
+    0.5px 0.5px 0 rgba(0, 0, 0, 0.35),
+    -0.5px 0 rgba(0, 0, 0, 0.15);
+}
+
+.bart-wordmark__text--sm {
+  font-size: 1rem;
+}
+
+.bart-wordmark__text--md {
+  font-size: 1.75rem;
+}
+
+.bart-wordmark__text--lg {
+  font-size: 2.25rem;
+}
+
+.bart-wordmark__bleed {
+  position: absolute;
+  inset: 0;
+  transform: translate(1px, 1px);
+  color: rgba(139, 0, 0, 0.14);
+  pointer-events: none;
+  user-select: none;
+}
+
+.bart-wordmark__bleed--on-dark {
+  color: rgba(0, 0, 0, 0.22);
+}

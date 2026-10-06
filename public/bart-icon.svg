@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" role="img" aria-label="B.A.R.T.">
+  <rect width="512" height="512" fill="#f3e6d0"/>
+  <rect width="512" height="128" fill="#8b0000"/>
+  <rect x="64" y="168" width="384" height="280" rx="8" fill="#fffef8" stroke="#e5d4bc" stroke-width="6"/>
+  <rect x="88" y="192" width="336" height="232" rx="4" fill="none" stroke="#8b0000" stroke-width="4" opacity="0.35"/>
+  <text
+    x="256"
+    y="92"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="52"
+    font-weight="700"
+    fill="#fffef8"
+    letter-spacing="4"
+  >B.A.R.T.</text>
+  <text
+    x="256"
+    y="330"
+    text-anchor="middle"
+    font-family="Georgia, 'Times New Roman', serif"
+    font-size="148"
+    font-weight="700"
+    fill="#8b0000"
+  >B</text>
+  <path
+    d="M 96 420 L 416 420"
+    stroke="#d4c4a8"
+    stroke-width="3"
+    stroke-dasharray="10 8"
+    fill="none"
+  />
+</svg>

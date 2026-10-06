@@ -1,0 +1,171 @@
+.reading-badge {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--color-cream-200);
+  border-radius: 0.5rem;
+  background-color: var(--color-margin-white);
+  box-shadow: var(--shadow-card);
+}
+
+.reading-badge--screen {
+  width: 100%;
+  max-width: 16rem;
+  aspect-ratio: 3 / 4;
+}
+
+.reading-badge__header {
+  flex-shrink: 0;
+  padding: 0.625rem 0.75rem;
+  text-align: center;
+  color: var(--color-margin-white);
+  background-color: var(--color-chapter-crimson);
+}
+
+.reading-badge__body {
+  position: relative;
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 1rem 1.25rem;
+  text-align: center;
+}
+
+.reading-badge__ruled {
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent,
+    transparent 1.4375rem,
+    rgba(28, 20, 16, 0.055) 1.4375rem,
+    rgba(28, 20, 16, 0.055) 1.5rem
+  );
+}
+
+.reading-badge__paper {
+  background-color: var(--color-margin-white);
+}
+
+.reading-badge__perforation {
+  flex-shrink: 0;
+  height: 0.5rem;
+  border-top: 2px dashed var(--color-cream-300);
+  background: linear-gradient(
+    to bottom,
+    var(--color-cream-100) 0%,
+    var(--color-margin-white) 100%
+  );
+}
+
+.reading-badge__bookplate {
+  margin-bottom: 0.75rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--color-ink-500);
+}
+
+.reading-badge__reader {
+  margin-bottom: 1rem;
+  font-size: 1.35rem;
+  font-weight: 700;
+  line-height: 1.25;
+  color: var(--color-ink-900);
+}
+
+.reading-badge__headline {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.35;
+  color: var(--color-crimson-700);
+}
+
+.reading-badge__subhead {
+  margin-top: 0.5rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--color-ink-700);
+}
+
+.reading-badge__idle-prompt {
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.55;
+  color: var(--color-ink-900);
+}
+
+.reading-badge__scan-frame {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 5.75rem;
+  height: 6.75rem;
+  margin-bottom: 1rem;
+  border: 2px dashed var(--color-cream-300);
+  border-radius: 0.75rem;
+  background-color: rgba(243, 230, 208, 0.35);
+  color: var(--color-crimson-600);
+}
+
+.reading-badge__scan-illustration {
+  width: 3.55rem;
+  height: 4.75rem;
+  filter: drop-shadow(0 2px 6px rgba(45, 0, 0, 0.1));
+}
+
+.reading-badge__scan-icon {
+  width: 2rem;
+  height: 2rem;
+  opacity: 0.85;
+}
+
+.stamp-block {
+  position: relative;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.125rem;
+  padding: 0.5rem 0.75rem;
+  border: 3px solid var(--color-crimson-600);
+  border-radius: 0.25rem;
+  background-color: rgba(255, 254, 248, 0.92);
+  transform: rotate(-4deg);
+  box-shadow:
+    1px 2px 0 rgba(110, 0, 0, 0.15),
+    0 0 0 1px rgba(139, 0, 0, 0.08) inset;
+}
+
+.stamp-block__value {
+  text-shadow:
+    0.5px 0.5px 0 rgba(139, 0, 0, 0.25),
+    -0.5px 0 rgba(139, 0, 0, 0.12);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .stamp-block--animate {
+    animation: stamp-thunk 0.38s cubic-bezier(0.34, 1.4, 0.64, 1) forwards;
+    transform: rotate(-4deg) scale(1.35);
+    opacity: 0.85;
+  }
+
+  @keyframes stamp-thunk {
+    0% {
+      transform: rotate(-6deg) scale(1.45);
+      opacity: 0.75;
+    }
+
+    55% {
+      transform: rotate(-3deg) scale(0.94);
+      opacity: 1;
+    }
+
+    100% {
+      transform: rotate(-4deg) scale(1);
+      opacity: 1;
+    }
+  }
+}
